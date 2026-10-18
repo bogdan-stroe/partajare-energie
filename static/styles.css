@@ -1,0 +1,93 @@
+/* Custom styles for Partajare Energie — Cooperativa de Energie & LIFE COMET */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    /* Brand Color Scheme (Cooperativa de Energie & LIFE COMET) */
+    --cde-yellow: #DBE200;
+    --cde-dark: #2F2F31;
+    --cde-gray: #93A29B;
+    --cde-teal: #0B7A75;
+    --cde-orange: #FF9914;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #262628;
+    color: #f1f5f9;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #202022;
+}
+::-webkit-scrollbar-thumb {
+    background: #47474a;
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #DBE200;
+}
+
+/* Glassmorphism effects with brand dark #2F2F31 background */
+.glass-panel {
+    background: rgba(47, 47, 49, 0.85);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(147, 162, 155, 0.2);
+}
+
+.glass-card {
+    background: rgba(47, 47, 49, 0.72);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(147, 162, 155, 0.16);
+    transition: all 0.25s ease-in-out;
+}
+
+.glass-card:hover {
+    border-color: rgba(219, 226, 0, 0.45);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(11, 122, 117, 0.25);
+}
+
+/* Brand glowing highlights */
+.glow-yellow {
+    text-shadow: 0 0 15px rgba(219, 226, 0, 0.45);
+}
+
+.glow-teal {
+    text-shadow: 0 0 15px rgba(11, 122, 117, 0.5);
+}
+
+.badge-glow-yellow {
+    box-shadow: 0 0 12px rgba(219, 226, 0, 0.25);
+}
+
+.badge-glow-teal {
+    box-shadow: 0 0 12px rgba(11, 122, 117, 0.3);
+}
+
+/* Pulse animation for live indicators */
+@keyframes soft-pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(0.96); }
+}
+
+.animate-soft-pulse {
+    animation: soft-pulse 2.5s infinite ease-in-out;
+}
+
+/* Shimmer animation for branding banners */
+@keyframes brand-shine {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.brand-gradient-text {
+    background: linear-gradient(135deg, #DBE200 0%, #FFFFFF 50%, #0B7A75 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
