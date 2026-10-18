@@ -2985,14 +2985,14 @@ function App() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center pb-6 border-b border-[#2F2F31]">
                         {/* Developer Card */}
                         <div className="flex items-center gap-3.5">
-                            <div className="p-2 rounded-xl bg-[#2F2F31] border border-[#DBE200]/30 shadow-sm">
+                            <div className="p-2 rounded-xl bg-[#2F2F31] border border-[#DBE200]/30 shadow-sm shrink-0">
                                 <img 
                                     src="/static/img/logo-cooperativa-yellow-trans.png" 
                                     alt="Cooperativa de Energie" 
-                                    className="h-10 w-auto object-contain"
+                                    style={{ height: "32px", width: "auto", maxHeight: "32px", objectFit: "contain", display: "block" }}
                                 />
                             </div>
-                            <div className="text-left">
+                            <div className="text-left min-w-0">
                                 <div className="font-bold text-white text-sm">Cooperativa de Energie</div>
                                 <p className="text-[11px] text-[#93A29B]">
                                     Dezvoltatorul software-ului de partajare a energiei în comunități.
@@ -3010,14 +3010,22 @@ function App() {
 
                         {/* Funder Card */}
                         <div className="flex items-center gap-3.5 justify-start md:justify-center">
-                            <div className="p-2 rounded-xl bg-white/95 border border-slate-200/80 shadow-sm">
+                            <div className="flex items-center gap-2.5 px-3 py-1.5 rounded-xl bg-white border border-slate-200 shadow-sm shrink-0 overflow-hidden">
+                                <img 
+                                    src="/static/img/flag-eu.svg" 
+                                    alt="Drapelul Uniunii Europene" 
+                                    style={{ height: "24px", width: "36px", minWidth: "36px", objectFit: "contain", display: "block", flexShrink: 0 }}
+                                    title="Uniunea Europeană"
+                                />
+                                <div style={{ height: "22px", width: "1px", backgroundColor: "#cbd5e1", flexShrink: 0 }}></div>
                                 <img 
                                     src="/static/img/logo-life-comet-trans.png" 
                                     alt="LIFE COMET" 
-                                    className="h-9 w-auto object-contain"
+                                    style={{ height: "28px", width: "auto", maxHeight: "28px", objectFit: "contain", display: "block", flexShrink: 0 }}
+                                    title="Programul LIFE COMET"
                                 />
                             </div>
-                            <div className="text-left">
+                            <div className="text-left min-w-0">
                                 <div className="font-bold text-white text-sm">Programul LIFE COMET</div>
                                 <p className="text-[11px] text-[#93A29B]">
                                     Finanțat de Uniunea Europeană pentru sprijinirea comunităților de energie.
@@ -3122,14 +3130,22 @@ function App() {
 
                                 {/* Funder */}
                                 <div className="p-4 rounded-xl bg-[#2F2F31] border border-[#0B7A75]/40 flex items-start gap-3.5">
-                                    <div className="bg-white/95 p-2 rounded-lg border border-slate-300 flex items-center justify-center">
+                                    <div className="bg-white p-2 px-3 rounded-lg border border-slate-300 flex items-center gap-2.5 shrink-0 shadow-sm overflow-hidden">
+                                        <img 
+                                            src="/static/img/flag-eu.svg" 
+                                            alt="Drapelul Uniunii Europene" 
+                                            style={{ height: "26px", width: "39px", minWidth: "39px", objectFit: "contain", display: "block", flexShrink: 0 }}
+                                            title="Uniunea Europeană"
+                                        />
+                                        <div style={{ height: "24px", width: "1px", backgroundColor: "#cbd5e1", flexShrink: 0 }}></div>
                                         <img 
                                             src="/static/img/logo-life-comet-trans.png" 
                                             alt="LIFE COMET" 
-                                            className="h-9 w-auto object-contain"
+                                            style={{ height: "30px", width: "auto", maxHeight: "30px", objectFit: "contain", display: "block", flexShrink: 0 }}
+                                            title="Programul LIFE COMET"
                                         />
                                     </div>
-                                    <div>
+                                    <div className="min-w-0">
                                         <div className="text-[10px] font-bold uppercase text-emerald-400 tracking-wider">Finanțator Program</div>
                                         <div className="text-base font-bold text-white">Uniunea Europeană — LIFE COMET</div>
                                         <p className="text-xs text-slate-300 mt-1">

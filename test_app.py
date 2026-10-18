@@ -63,6 +63,17 @@ def test_full_pipeline():
     assert lic_json["project_url"] == "https://lifecomet.rescoop.eu/"
     print("[OK] [1b/15] Licență & Link oficial LIFE COMET:", lic_json["project_url"])
 
+    # Verificare disponibilitate steag UE și pagină dedicată de licență
+    res_flag = client.get("/static/img/flag-eu.svg")
+    assert res_flag.status_code == 200, "Fișierul flag-eu.svg nu este disponibil"
+    assert "<svg" in res_flag.text and "eu-star" in res_flag.text
+
+    res_license_page = client.get("/license")
+    assert res_license_page.status_code == 200, "Pagina /license nu răspunde cu cod 200"
+    assert "flag-eu.svg" in res_license_page.text, "Steagul UE lipsește din pagina de licență"
+    assert "logo-life-comet-trans.png" in res_license_page.text, "Sigla LIFE COMET lipsește din pagina de licență"
+    print("[OK] [1c/15] Steagul UE și pagina de licență (/license) validate cu succes.")
+
     # 2. Cele 8 Zone de Distribuție din România
     res_zones = client.get("/api/distribution-zones")
     assert res_zones.status_code == 200

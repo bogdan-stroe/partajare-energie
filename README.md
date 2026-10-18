@@ -10,24 +10,6 @@ Include **backend Python (FastAPI)**, **bază de date SQLite (SQLAlchemy 2.0 ORM
 
 ---
 
-## 🎨 Identitate Vizuală & Schemă de Culori
-
-Aplicația respectă identitatea vizuală oficială a **Cooperativei de Energie** și a programului **LIFE COMET**:
-
-| Culoare Hex | Denumire Brand | Utilizare în Aplicație |
-|---|---|---|
-| `#DBE200` | **Galben / Lime Cooperativa** | Sigla CE, accente primare, tab activ, autoconsum local, insigne ANRE admise |
-| `#2F2F31` | **Antracit / Dark Slate** | Fundaluri carduri și panouri, header, bara de navigare |
-| `#93A29B` | **Gri Salvie / Slate Muted** | Borduri, separatoare, subtitluri, text secundar |
-| `#0B7A75` | **Teal / Albastru-Verde Închis** | Butoane de acțiune, partajare comunitară în grafic, fundaluri toast |
-| `#FF9914` | **Portocaliu Solar / Energetic** | Energie din rețea, alerte, producție fotovoltaică, badge-uri de atenționare |
-
-### 🖼️ Sigle Integrate în UI
-1. **Sigla Dezvoltatorului**: `static/img/logo-cooperativa-yellow-trans.png` (Cooperativa de Energie)
-2. **Sigla Finanțatorului**: `static/img/logo-life-comet-trans.png` (Uniunea Europeană — Programul LIFE COMET: https://lifecomet.rescoop.eu/)
-
----
-
 ## 🌟 Funcționalități Principale
 
 ### 1. 🏛️ Comunități de Energie & Evidență Registru ANRE

@@ -3,7 +3,7 @@ from pathlib import Path
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, RedirectResponse
 
 from app.database import engine, Base, SessionLocal
 from app.seed_data import seed_initial_data
@@ -97,3 +97,12 @@ def serve_index():
     if index_file.exists():
         return FileResponse(str(index_file))
     return {"message": "Interfața web este în curs de încărcare. Accesați /docs pentru documentația API."}
+
+
+@app.get("/license", include_in_schema=False)
+def serve_license():
+    license_file = STATIC_DIR / "license.html"
+    if license_file.exists():
+        return FileResponse(str(license_file))
+    return RedirectResponse(url="/")
+
